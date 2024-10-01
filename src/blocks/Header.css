@@ -1,0 +1,49 @@
+@import url("../vendor/fonts.css");
+.header {
+  display: flex;
+  align-items: center;
+  padding: 32px 0 28px;
+  margin: 32px 40px 0 40px;
+}
+.header__logo {
+  margin-right: 24px;
+  width: 89px;
+  height: 40px;
+}
+.header__date-and-location {
+  margin: 0;
+  font-family: "Cabinet Grotesk", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin-right: auto;
+}
+.header__add-clothes-btn {
+  margin: auto 20px auto auto;
+  background: transparent;
+  border: none;
+  font-family: "Cabinet Grotesk", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+.header__user-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+.header__username {
+  margin: auto 0 auto 12px;
+  font-family: "Cabinet Grotesk", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24.8px;
+}
+.header__avatar {
+  width: 40px;
+  height: 40px;
+  border-width: 1px;
+  border-color: #00000080;
+}
