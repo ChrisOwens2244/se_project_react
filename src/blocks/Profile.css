@@ -1,0 +1,6 @@
+.profile {
+  margin: 0 40px 80px 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
