@@ -79,12 +79,6 @@
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Skirt.png?etag=27a6bea7e1b63218820d615876fa31d1"
     },
     {
-      "_id": 13,
-      "name": "Sneakers",
-      "weather": "warm",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Sneakers.png?etag=3efeec41c1c78b8afe26859ca7fa7b6f"
-    },
-    {
       "_id": 14,
       "name": "Sunglasses",
       "weather": "hot",
@@ -103,16 +97,16 @@
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png?etag=44ed1963c44ab19cd2f5011522c5fc09"
     },
     {
-      "name": "aa",
-      "weather": "warm",
-      "imageUrl": "https://s3-alpha-sig.figma.com/img/a06c/ae33/3b1266412415ab8fd43e3d7f0fd17bbe?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=X2Mk16iJeLgVw7MhYf-iIo2HEPO42XesqKAS0p-QxjFfZE5gwL2zgf9ciyfNFwhtfMkk4G94s3fAwq0yscGArFSwEkuKMCMKJwkYz1iv04kLgcWZca~1B0RdqNSMLv-APNDLcf3BdaSFO68q93gObh4ceMIygGQFCsSVsXGCc5AMVnIE6bX7O6WKFHusSJZmWxd6DJC0KTQev-6pJ76LIZRuZbRr0KLlQ91Rw9LDnYelzaAqzf8WeuJHvRR8uaMDekV8EOGmBAJEyTRxZ0sUn2pGSslIXdvtaEz5khwzS8oYdbidr6OlCmdexrBX4kdiyKwAUGrMBxVLMGqAMj7ZCQ__",
-      "_id": 20
-    },
-    {
       "name": "asdf",
       "weather": "warm",
       "imageUrl": "https://s3-alpha-sig.figma.com/img/a06c/ae33/3b1266412415ab8fd43e3d7f0fd17bbe?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=X2Mk16iJeLgVw7MhYf-iIo2HEPO42XesqKAS0p-QxjFfZE5gwL2zgf9ciyfNFwhtfMkk4G94s3fAwq0yscGArFSwEkuKMCMKJwkYz1iv04kLgcWZca~1B0RdqNSMLv-APNDLcf3BdaSFO68q93gObh4ceMIygGQFCsSVsXGCc5AMVnIE6bX7O6WKFHusSJZmWxd6DJC0KTQev-6pJ76LIZRuZbRr0KLlQ91Rw9LDnYelzaAqzf8WeuJHvRR8uaMDekV8EOGmBAJEyTRxZ0sUn2pGSslIXdvtaEz5khwzS8oYdbidr6OlCmdexrBX4kdiyKwAUGrMBxVLMGqAMj7ZCQ__",
       "_id": 21
+    },
+    {
+      "name": "as",
+      "weather": "cold",
+      "imageUrl": "https://s3-alpha-sig.figma.com/img/3d7d/4cfb/1bd02f20280afa626b78c2026585db9c?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=B0HssxBWc3PWC1U9fh7gfTY3xGvRnswYceGsVlnT35uzFjbQp0v6r2LMsaqOqGMNj2pPH47ABNXWMzeqyuwVN-DxFjcT~4PQYLhTKhSOgbxNEvuL-E6Q8sKvmQnocl4~apdTmBJ-BE3cM7SmhK5ryTisW9vHH8yNFBXDAiYst~aNkHUi5AO19UmTVy-p2SyoT2pvL4M6dy43TAD7R4cCZ0F6qb4ePeXr0xh1tLbNS7Mvy109WD6uU2CEE~SfRcTW4PCyx4Bo--Ka8weXlc4yxFzqEZp5in4UVHPF6NhBifbDz7siohJBzUWYyXtZzVpJQpAt3Q~H4jt28NVm0IbHdw__",
+      "_id": 22
     }
   ]
 }

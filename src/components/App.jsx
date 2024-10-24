@@ -42,7 +42,7 @@ function App() {
   };
 
   const onAddItem = (values) => {
-    addClothingItems(values);
+    addClothingItems(values).then(closeActiveModal()).catch(console.error);
   };
 
   const handleToggleSwitchChange = () => {
@@ -52,7 +52,7 @@ function App() {
   };
 
   const handleDelete = (card) => {
-    deleteClothingItems(card);
+    deleteClothingItems(card).then(closeActiveModal()).catch(console.error);
   };
 
   useEffect(() => {

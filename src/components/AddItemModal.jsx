@@ -36,7 +36,6 @@ const AddItemModal = ({ isOpen, onAddItem, onCloseModal }) => {
     e.preventDefault();
     // _id is temporary until server is added.
     onAddItem({ name: name, weather: weather, imageUrl: imageUrl });
-    onCloseModal();
   }
 
   return (
