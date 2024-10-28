@@ -8,11 +8,11 @@ function checkResponse(res) {
 }
 
 export function getClothes() {
-  return fetch(`${baseUrl}/items`).then(checkResponse);
+  return fetch(`${baseUrl}/items?_sort=_id&_order=desc`).then(checkResponse);
 }
 
 export function addClothingItems({ name, weather, imageUrl }) {
-  return fetch(`${baseUrl}/items`, {
+  return fetch(`${baseUrl}/items?_sort=_id&_order=desc`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, weather, imageUrl }),

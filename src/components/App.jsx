@@ -41,8 +41,21 @@ function App() {
     setActiveModal("");
   };
 
+  const changeClothes = () => {
+    getClothes()
+      .then((data) => {
+        setClothingItems(data);
+      })
+      .catch(console.error);
+  };
+
   const onAddItem = (values) => {
-    addClothingItems(values).then(closeActiveModal()).catch(console.error);
+    addClothingItems(values)
+      .then(() => {
+        changeClothes();
+        closeActiveModal();
+      })
+      .catch(console.error);
   };
 
   const handleToggleSwitchChange = () => {
@@ -52,16 +65,17 @@ function App() {
   };
 
   const handleDelete = (card) => {
-    deleteClothingItems(card).then(closeActiveModal()).catch(console.error);
+    deleteClothingItems(card)
+      .then(() => {
+        changeClothes();
+        closeActiveModal();
+      })
+      .catch(console.error);
   };
 
   useEffect(() => {
-    getClothes()
-      .then((data) => {
-        setClothingItems(data);
-      })
-      .catch(console.error);
-  });
+    changeClothes();
+  }, []);
 
   useEffect(() => {
     getWeather(coordinates, APIkey)
