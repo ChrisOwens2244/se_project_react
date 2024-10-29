@@ -41,18 +41,10 @@ function App() {
     setActiveModal("");
   };
 
-  const changeClothes = () => {
-    getClothes()
-      .then((data) => {
-        setClothingItems(data);
-      })
-      .catch(console.error);
-  };
-
   const onAddItem = (values) => {
     addClothingItems(values)
-      .then(() => {
-        changeClothes();
+      .then((data) => {
+        setClothingItems([data, ...clothingItems]);
         closeActiveModal();
       })
       .catch(console.error);
@@ -66,15 +58,23 @@ function App() {
 
   const handleDelete = (card) => {
     deleteClothingItems(card)
-      .then(() => {
-        changeClothes();
+      .then((data) => {
+        setClothingItems(
+          clothingItems.filter((item) => {
+            return item._id != card._id;
+          })
+        );
         closeActiveModal();
       })
       .catch(console.error);
   };
 
   useEffect(() => {
-    changeClothes();
+    getClothes()
+      .then((data) => {
+        setClothingItems(data);
+      })
+      .catch(console.error);
   }, []);
 
   useEffect(() => {
