@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { getToken } from "../utils/token.js";
 import ModalWithForm from "./ModalWithForm.jsx";
 
 const AddItemModal = ({ isOpen, onAddItem, onCloseModal }) => {
@@ -34,7 +35,7 @@ const AddItemModal = ({ isOpen, onAddItem, onCloseModal }) => {
     // prevent default behavior
     // call onAddItem with appropriate arguments
     e.preventDefault();
-    onAddItem({ name: name, weather: weather, imageUrl: imageUrl });
+    onAddItem({ name: name, weather: weather, imageUrl: imageUrl }, getToken);
   }
 
   return (
