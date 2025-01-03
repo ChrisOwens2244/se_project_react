@@ -13,9 +13,14 @@
   overflow: hidden;
 }
 
-.card__name {
+.card__name-container {
   position: absolute;
+  display: flex;
   top: 12px;
+  margin: 0;
+  gap: 10px;
+}
+.card__name {
   margin: 0;
   font-family: "Cabinet Grotesk", Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -28,4 +33,27 @@
 
 .card__image {
   width: 100%;
+}
+
+.card__like-btn {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  background-color: transparent;
+  border-style: none;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card__like-btn_hidden {
+  visibility: hidden;
+}
+
+.card__like-btn_liked {
+  background-image: url("../assets/like.svg");
+}
+
+.card__like-btn_disliked {
+  background-image: url("../assets/dislike.svg");
 }

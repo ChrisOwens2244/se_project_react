@@ -180,7 +180,7 @@ function App() {
         setClothingItems(data);
       })
       .catch(console.error);
-  }, []);
+  }, [clothingItems]);
 
   useEffect(() => {
     getWeather(coordinates, APIkey)
