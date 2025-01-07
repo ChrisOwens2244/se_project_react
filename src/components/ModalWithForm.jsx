@@ -5,7 +5,13 @@ function ModalWithForm({
   handleCloseClick,
   isOpen,
   onSubmit,
+  isAuth,
+  switchText,
+  onSwitch,
 }) {
+  const swicthButtonName = isAuth
+    ? "modal__switch-btn"
+    : "modal__switch-btn modal__switch-btn_hidden";
   return (
     <div className={`modal ${isOpen && "modal_opened"}`}>
       <div className="modal__content">
@@ -17,9 +23,18 @@ function ModalWithForm({
         />
         <form className="modal__form" onSubmit={onSubmit}>
           {children}
-          <button type="submit" className="modal__submit">
-            {buttonText}
-          </button>
+          <div className="modal__buttons">
+            <button type="submit" className="modal__submit">
+              {buttonText}
+            </button>
+            <button
+              type="button"
+              className={swicthButtonName}
+              onClick={onSwitch}
+            >
+              or {switchText}
+            </button>
+          </div>
         </form>
       </div>
     </div>

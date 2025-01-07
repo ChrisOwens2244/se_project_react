@@ -45,6 +45,8 @@ const AddItemModal = ({ isOpen, onAddItem, onCloseModal }) => {
       handleCloseClick={onCloseModal}
       isOpen={isOpen}
       onSubmit={handleSubmit}
+      isAuth={false}
+      switchText=""
     >
       <label htmlFor="name" className="modal__label">
         Name

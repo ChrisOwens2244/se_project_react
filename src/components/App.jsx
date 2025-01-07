@@ -72,7 +72,7 @@ function App() {
     const token = getToken();
     addClothingItems(values, token)
       .then((data) => {
-        setClothingItems([data, ...clothingItems]);
+        setClothingItems([data.item, ...clothingItems]);
         closeActiveModal();
       })
       .catch(console.error);
@@ -89,7 +89,7 @@ function App() {
     deleteClothingItems(card, token)
       .then(() => {
         setClothingItems(
-          clothingItems.prototype.filter((item) => {
+          clothingItems.filter((item) => {
             return item._id != card._id;
           })
         );
@@ -150,6 +150,16 @@ function App() {
     setActiveModal("signup");
   };
 
+  const handleLogInToSignUp = () => {
+    closeActiveModal();
+    handleSignUpClick();
+  };
+
+  const handleSignUpToLogIn = () => {
+    closeActiveModal();
+    handleLoginClick();
+  };
+
   const handleCardLike = ({ id, isLiked }) => {
     const token = getToken();
     // Check if this card is not currently liked
@@ -159,7 +169,7 @@ function App() {
         addCardLike(id, token)
           .then((updatedCard) => {
             setClothingItems((cards) =>
-              cards.map((item) => (item._id === id ? updatedCard : item))
+              cards.map((item) => (item._id === id ? updatedCard.item : item))
             );
           })
           .catch(console.error)
@@ -168,7 +178,7 @@ function App() {
         removeCardLike(id, token)
           .then((updatedCard) => {
             setClothingItems((cards) =>
-              cards.map((item) => (item._id === id ? updatedCard : item))
+              cards.map((item) => (item._id === id ? updatedCard.item : item))
             );
           })
           .catch(console.error);
@@ -176,11 +186,12 @@ function App() {
 
   useEffect(() => {
     getClothes()
-      .then(({ data }) => {
-        setClothingItems(data);
+      .then((data) => {
+        console.log(data);
+        setClothingItems(data.data.reverse());
       })
       .catch(console.error);
-  }, [clothingItems]);
+  }, []);
 
   useEffect(() => {
     getWeather(coordinates, APIkey)
@@ -293,6 +304,7 @@ function App() {
               isOpen={activeModal === "login"}
               onLogin={handleLogin}
               onCloseModal={closeActiveModal}
+              handleSwitch={handleLogInToSignUp}
             />
           )}
           {activeModal === "signup" && (
@@ -300,6 +312,7 @@ function App() {
               isOpen={activeModal === "signup"}
               onRegister={handleRegistration}
               onCloseModal={closeActiveModal}
+              handleSwitch={handleSignUpToLogIn}
             />
           )}
           {activeModal === "edit" && (

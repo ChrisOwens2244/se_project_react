@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import ModalWithForm from "./ModalWithForm";
+import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
 function EditProfileModal({ isOpen, onEdit, onCloseModal }) {
+  const user = useContext(CurrentUserContext);
+  const currentUser = user.currentUser.data;
   const [name, setName] = useState("");
   const [avatar, setAvatarURL] = useState("");
 
   useEffect(() => {
-    setName("");
-    setAvatarURL("");
+    setName(`${currentUser.name}`);
+    setAvatarURL(`${currentUser.avatar}`);
   }, [isOpen]);
 
   const handleNameChange = (e) => {
@@ -34,6 +37,8 @@ function EditProfileModal({ isOpen, onEdit, onCloseModal }) {
       handleCloseClick={onCloseModal}
       isOpen={isOpen}
       onSubmit={handleSubmit}
+      isAuth={false}
+      switchText=""
     >
       <label htmlFor="name" className="modal__label">
         Name

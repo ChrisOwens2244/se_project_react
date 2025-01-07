@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ModalWithForm from "./ModalWithForm";
 
-function LoginModal({ isOpen, onLogin, onCloseModal }) {
+function LoginModal({ isOpen, onLogin, onCloseModal, handleSwitch }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -29,10 +29,13 @@ function LoginModal({ isOpen, onLogin, onCloseModal }) {
   return (
     <ModalWithForm
       buttonText="Next"
-      title="Sign-up"
+      title="Log In"
       handleCloseClick={onCloseModal}
       isOpen={isOpen}
       onSubmit={handleSubmit}
+      isAuth={true}
+      switchText="Sign Up"
+      onSwitch={handleSwitch}
     >
       <label htmlFor="email" className="modal__label">
         Email

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ModalWithForm from "./ModalWithForm";
 
-function RegisterModal({ isOpen, onRegister, onCloseModal }) {
+function RegisterModal({ isOpen, onRegister, onCloseModal, handleSwitch }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -47,6 +47,9 @@ function RegisterModal({ isOpen, onRegister, onCloseModal }) {
       handleCloseClick={onCloseModal}
       isOpen={isOpen}
       onSubmit={handleSubmit}
+      isAuth={true}
+      switchText="Log In"
+      onSwitch={handleSwitch}
     >
       <label htmlFor="email" className="modal__label">
         Email*
