@@ -122,7 +122,6 @@ function App() {
         setUserData(res);
         setIsLoggedIn(true);
         setIsLoading(false);
-        console.log(isLoggedIn);
         closeActiveModal();
       })
       .catch(console.error);
@@ -137,9 +136,12 @@ function App() {
 
   const handleEdit = ({ name, avatar }) => {
     const jwt = getToken();
-    editUser(name, avatar, jwt).then((update) => {
-      setUserData(update);
-    });
+    editUser(name, avatar, jwt)
+      .then((update) => {
+        setUserData(update);
+        closeActiveModal();
+      })
+      .catch(console.error);
   };
 
   const handleLoginClick = () => {
@@ -217,8 +219,6 @@ function App() {
           setIsLoggedIn(true);
           setUserData(data);
           setIsLoading(false);
-          console.log(isLoggedIn);
-          console.log(data);
         })
         .catch((error) => {
           setIsLoading(false);

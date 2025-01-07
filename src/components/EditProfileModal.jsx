@@ -27,7 +27,6 @@ function EditProfileModal({ isOpen, onEdit, onCloseModal }) {
       name: name,
       avatar: avatar,
     });
-    onCloseModal();
   };
 
   return (
