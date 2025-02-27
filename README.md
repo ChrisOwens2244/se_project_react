@@ -9,6 +9,10 @@ The idea of the application is pretty simple - we make a call to an API, which t
 -React: used to create the fornt-end for the project.
 -Mongoose DB: The server created in project 13 has been linked to this project by changing the port that data is shared with. From there the ablity to log in users and save likes has been added.
 
+## Improvements
+
+Adding adaptablity for smalleer screen reslolutions.
+
 ## Links
 
 - [Figma Design](https://www.figma.com/design/bfVOvqlLmoKZ5lpro8WWBe/Sprint-14_-WTWR?node-id=1-1105&t=jtKY8o9EoFksBFQS-0)
