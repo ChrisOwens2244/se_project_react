@@ -11,7 +11,9 @@ The idea of the application is pretty simple - we make a call to an API, which t
 
 ## Improvements
 
-Adding adaptablity for smalleer screen reslolutions.
+- Adding adaptablity for smalleer screen reslolutions.
+- Make the weather bar change graphics to reflect the weather in the area.
+- Allow users to change the current location as it is currently at a fixed loacation.
 
 ## Links
 
